@@ -1,0 +1,1 @@
+var json_HospitalParticulardaMadeira_19 = {"type":"FeatureCollection","name":"HospitalParticulardaMadeira_19","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1"},"geometry":{"type":"Point","coordinates":[-16.9417599263,32.6474660215]}}]}

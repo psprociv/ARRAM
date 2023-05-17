@@ -1,0 +1,1 @@
+var json_CentroRadiologicodoFunchal_22 = {"type":"FeatureCollection","name":"CentroRadiologicodoFunchal_22","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1"},"geometry":{"type":"Point","coordinates":[-16.9088295548,32.6518729283]}}]}

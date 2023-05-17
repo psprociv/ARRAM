@@ -1,0 +1,1 @@
+var json_HospitaldaLuz_21 = {"type":"FeatureCollection","name":"HospitaldaLuz_21","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1"},"geometry":{"type":"Point","coordinates":[-16.9138023155,32.6541583602]}}]}

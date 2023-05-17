@@ -1,0 +1,1 @@
+var json_FurnasdoCavalum_29 = {"type":"FeatureCollection","name":"FurnasdoCavalum_29","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","descr":"Furnas do Cavalum","coord":"32°43'56.2\"N16°47'03.1\"W"},"geometry":{"type":"Point","coordinates":[-16.7841944444,32.7322777778]}}]}

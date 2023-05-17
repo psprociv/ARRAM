@@ -1,0 +1,1 @@
+var json_AeroportodaMadeira_24 = {"type":"FeatureCollection","name":"AeroportodaMadeira_24","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1"},"geometry":{"type":"Point","coordinates":[-16.7771878607,32.6930546427]}}]}
