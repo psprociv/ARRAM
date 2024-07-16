@@ -1,0 +1,1 @@
+var json_MadeiraMedicalCenter_19 = {"type":"FeatureCollection","name":"MadeiraMedicalCenter_19","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"xy_coordinate_resolution":1e-10,"features":[{"type":"Feature","properties":{"id":"1"},"geometry":{"type":"Point","coordinates":[-16.903302102,32.6492407824]}}]}

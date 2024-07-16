@@ -1,0 +1,1 @@
+var json_AeroportodoPortoSanto_24 = {"type":"FeatureCollection","name":"AeroportodoPortoSanto_24","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"xy_coordinate_resolution":1e-10,"features":[{"type":"Feature","properties":{"id":"1"},"geometry":{"type":"Point","coordinates":[-16.3481072783,33.0706911106]}}]}

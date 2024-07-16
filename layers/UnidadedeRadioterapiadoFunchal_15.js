@@ -1,0 +1,1 @@
+var json_UnidadedeRadioterapiadoFunchal_15 = {"type":"FeatureCollection","name":"UnidadedeRadioterapiadoFunchal_15","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"xy_coordinate_resolution":1e-10,"features":[{"type":"Feature","properties":{"id":"1"},"geometry":{"type":"Point","coordinates":[-16.9570304522,32.6511242051]}}]}
