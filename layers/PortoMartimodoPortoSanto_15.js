@@ -1,1 +1,0 @@
-var json_PortoMartimodoPortoSanto_15 = {"type":"FeatureCollection","name":"PortoMartimodoPortoSanto_15","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1"},"geometry":{"type":"Point","coordinates":[-16.3118141496,33.063321737]}}]}

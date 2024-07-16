@@ -1,1 +1,0 @@
-var json_HospitalDrNelioMendona_20 = {"type":"FeatureCollection","name":"HospitalDrNelioMendona_20","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1"},"geometry":{"type":"Point","coordinates":[-16.9246553818,32.6486984024]}}]}
