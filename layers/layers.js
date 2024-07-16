@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("EPSG:5016").setExtent([358049.745016, 3646777.898294, 393714.502430, 3671495.200195]);
+//ol.proj.get("EPSG:5016").setExtent([277566.776449, 3601473.611793, 387898.026449, 3672037.986793]);
 var wms_layers = [];
 
 var format_OceanoAtlntico_0 = new ol.format.GeoJSON();
