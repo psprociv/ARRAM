@@ -1,22 +1,6 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("EPSG:5016").setExtent([277566.776449, 3601473.611793, 387898.026449, 3672037.986793]);
+//ol.proj.get("EPSG:5016").setExtent([358049.745016, 3646777.898294, 393714.502430, 3671495.200195]);
 var wms_layers = [];
-
-var format_OceanoAtlntico_0 = new ol.format.GeoJSON();
-var features_OceanoAtlntico_0 = format_OceanoAtlntico_0.readFeatures(json_OceanoAtlntico_0, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:5016'});
-var jsonSource_OceanoAtlntico_0 = new ol.source.Vector({
-    attributions: ' ',
-});
-jsonSource_OceanoAtlntico_0.addFeatures(features_OceanoAtlntico_0);
-var lyr_OceanoAtlntico_0 = new ol.layer.Vector({
-                declutter: false,
-                source:jsonSource_OceanoAtlntico_0, 
-                style: style_OceanoAtlntico_0,
-                popuplayertitle: "Oceano Atlântico",
-                interactive: true,
-                title: '<img src="styles/legend/OceanoAtlntico_0.png" /> Oceano Atlântico'
-            });
 
         var lyr_GoogleSatellite_1 = new ol.layer.Tile({
             'title': 'Google Satellite',
@@ -923,21 +907,6 @@ var lyr_Concelhos_57 = new ol.layer.Vector({
                 interactive: true,
                 title: '<img src="styles/legend/Concelhos_57.png" /> Concelhos'
             });
-var format_Ilha_58 = new ol.format.GeoJSON();
-var features_Ilha_58 = format_Ilha_58.readFeatures(json_Ilha_58, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:5016'});
-var jsonSource_Ilha_58 = new ol.source.Vector({
-    attributions: ' ',
-});
-jsonSource_Ilha_58.addFeatures(features_Ilha_58);
-var lyr_Ilha_58 = new ol.layer.Vector({
-                declutter: false,
-                source:jsonSource_Ilha_58, 
-                style: style_Ilha_58,
-                popuplayertitle: "Ilha",
-                interactive: true,
-                title: '<img src="styles/legend/Ilha_58.png" /> Ilha'
-            });
 var group_Localizaodascavidadessubterrneasnaturais = new ol.layer.Group({
                                 layers: [lyr_FurnasdoCavalum_30,lyr_GrutasdeSoVicente_31,],
                                 fold: "open",
@@ -975,13 +944,12 @@ var group_Acidentesrodovirios = new ol.layer.Group({
                                 fold: "open",
                                 title: "Acidentes rodoviários"});
 var group_Basecartogrfica = new ol.layer.Group({
-                                layers: [lyr_OceanoAtlntico_0,lyr_GoogleSatellite_1,lyr_Informao_2,lyr_OrtofotomapaRAM_3,],
+                                layers: [lyr_GoogleSatellite_1,lyr_Informao_2,],
                                 fold: "open",
                                 title: "Base cartográfica"});
 
-lyr_OceanoAtlntico_0.setVisible(true);lyr_GoogleSatellite_1.setVisible(true);lyr_Informao_2.setVisible(true);lyr_OrtofotomapaRAM_3.setVisible(true);lyr_Acidentesgraves_4.setVisible(false);lyr_Acidentesrodovirios_5.setVisible(false);lyr_Parquesempresariais_6.setVisible(false);lyr_Estabelecimentosindustriais_7.setVisible(false);lyr_Suscetibilidademoderadaocorrnciadeacidentesemestabelecimentosindustriais_8.setVisible(false);lyr_Localizaodospaiis_9.setVisible(false);lyr_reasinundveis_10.setVisible(false);lyr_Barragens_11.setVisible(false);lyr_Armazenagemdecombustveis_12.setVisible(false);lyr_GsdePetrleoLiquefeito_13.setVisible(false);lyr_Classesdesuscetibilidade_14.setVisible(false);lyr_UnidadedeRadioterapiadoFunchal_15.setVisible(false);lyr_PortoMartimodoPortoSanto_16.setVisible(false);lyr_PortoMartimodoFunchal_17.setVisible(false);lyr_PortoMartimodoCanial_18.setVisible(false);lyr_MadeiraMedicalCenter_19.setVisible(false);lyr_HospitalParticulardaMadeira_20.setVisible(false);lyr_HospitalDrNelioMendona_21.setVisible(false);lyr_HospitaldaLuz_22.setVisible(false);lyr_CentroRadiologicodoFunchal_23.setVisible(false);lyr_AeroportodoPortoSanto_24.setVisible(false);lyr_AeroportodaMadeira_25.setVisible(false);lyr_Tneis_26.setVisible(false);lyr_Ponteseviadutos_27.setVisible(false);lyr_Outrostrajetos_28.setVisible(false);lyr_TrajetoZonaFrancaUAG_29.setVisible(false);lyr_FurnasdoCavalum_30.setVisible(false);lyr_GrutasdeSoVicente_31.setVisible(false);lyr_Suscetibilidadeaoriscodeincndiosflorestais_32.setVisible(false);lyr_SuscetibilidadeaIncndiosecolapsosemcentroshistricoseemedifcioscomelevadaconcentraopopulacional_33.setVisible(false);lyr_Ocorrnciadeincndiosemtneis_34.setVisible(false);lyr_Suscetibilidadeaincndiosemtneis_35.setVisible(false);lyr_Suscetibilidadeocorrenciadeacidentescomsubstnciasbiolgicasqumicaseradiolgicas_36.setVisible(false);lyr_SuscetibilidadeaacidentesqueenvolvamsubstnciasperigosasSevesoIII_37.setVisible(false);lyr_Suscetibilidadeaerosocosteiranabasedaarriba_38.setVisible(false);lyr_Suscetibilidadeaerosocosteiraemarribas_39.setVisible(false);lyr_Suscetibilidadeamovimentosdemassaemvertente_40.setVisible(false);lyr_Suscetibilidadeaoriscodenevoeiros_41.setVisible(false);lyr_Sismoscommagnitudesuperiora20escaladeRichterregistadosdesde2010_42.setVisible(false);lyr_Suscetibilidadeocorrnciadesismos_43.setVisible(false);lyr_Suscetibilidadeaatividadevulcnica_44.setVisible(false);lyr_OcorrnciasdeemanacesdeCO2_45.setVisible(false);lyr_Suscetibilidadeaoriscodetsunami_46.setVisible(false);lyr_Ocorrnciadegalgamentoscosteiros_47.setVisible(false);lyr_Suscetibilidadeagalgamentoscosteiros_48.setVisible(false);lyr_Baciashidrogrficas_49.setVisible(false);lyr_reasinundveis_50.setVisible(false);lyr_Suscetibilidadeatempestadesdevento_51.setVisible(false);lyr_Suscetibilidadeaoriscodesecas_52.setVisible(false);lyr_Suscetibilidadeaondasdefrio_53.setVisible(false);lyr_Suscetibilidadeaondasdecalor_54.setVisible(false);lyr_Suscetibilidadeaoriscodeneves_55.setVisible(false);lyr_Freguesias_56.setVisible(false);lyr_Concelhos_57.setVisible(true);lyr_Ilha_58.setVisible(true);
-var layersList = [group_Basecartogrfica,group_Acidentesrodovirios,group_Acidentesemreasdeocupaoindustrialeparquesempresariais,group_Armazenagemdeprodutosexplosivos,group_Suscetibilidadeaoriscodeinundaoporroturadebarragens,group_Acidenteseminstalaesdecombustveisleoselubrificantes,group_Suscetibilidadeaoriscodeemergnciasradiolgicas,group_Localizaodetneisponteseoutrasinfraestruturas,group_Acidentesnotransportedemercadoriasperigosas,group_Localizaodascavidadessubterrneasnaturais,lyr_Suscetibilidadeaoriscodeincndiosflorestais_32,lyr_SuscetibilidadeaIncndiosecolapsosemcentroshistricoseemedifcioscomelevadaconcentraopopulacional_33,lyr_Ocorrnciadeincndiosemtneis_34,lyr_Suscetibilidadeaincndiosemtneis_35,lyr_Suscetibilidadeocorrenciadeacidentescomsubstnciasbiolgicasqumicaseradiolgicas_36,lyr_SuscetibilidadeaacidentesqueenvolvamsubstnciasperigosasSevesoIII_37,lyr_Suscetibilidadeaerosocosteiranabasedaarriba_38,lyr_Suscetibilidadeaerosocosteiraemarribas_39,lyr_Suscetibilidadeamovimentosdemassaemvertente_40,lyr_Suscetibilidadeaoriscodenevoeiros_41,lyr_Sismoscommagnitudesuperiora20escaladeRichterregistadosdesde2010_42,lyr_Suscetibilidadeocorrnciadesismos_43,lyr_Suscetibilidadeaatividadevulcnica_44,lyr_OcorrnciasdeemanacesdeCO2_45,lyr_Suscetibilidadeaoriscodetsunami_46,lyr_Ocorrnciadegalgamentoscosteiros_47,lyr_Suscetibilidadeagalgamentoscosteiros_48,lyr_Baciashidrogrficas_49,lyr_reasinundveis_50,lyr_Suscetibilidadeatempestadesdevento_51,lyr_Suscetibilidadeaoriscodesecas_52,lyr_Suscetibilidadeaondasdefrio_53,lyr_Suscetibilidadeaondasdecalor_54,lyr_Suscetibilidadeaoriscodeneves_55,lyr_Freguesias_56,lyr_Concelhos_57,lyr_Ilha_58];
-lyr_OceanoAtlntico_0.set('fieldAliases', {'id': 'id', });
+lyr_GoogleSatellite_1.setVisible(true);lyr_Informao_2.setVisible(true);lyr_Acidentesgraves_4.setVisible(false);lyr_Acidentesrodovirios_5.setVisible(false);lyr_Parquesempresariais_6.setVisible(false);lyr_Estabelecimentosindustriais_7.setVisible(false);lyr_Suscetibilidademoderadaocorrnciadeacidentesemestabelecimentosindustriais_8.setVisible(false);lyr_Localizaodospaiis_9.setVisible(false);lyr_reasinundveis_10.setVisible(false);lyr_Barragens_11.setVisible(false);lyr_Armazenagemdecombustveis_12.setVisible(false);lyr_GsdePetrleoLiquefeito_13.setVisible(false);lyr_Classesdesuscetibilidade_14.setVisible(false);lyr_UnidadedeRadioterapiadoFunchal_15.setVisible(false);lyr_PortoMartimodoPortoSanto_16.setVisible(false);lyr_PortoMartimodoFunchal_17.setVisible(false);lyr_PortoMartimodoCanial_18.setVisible(false);lyr_MadeiraMedicalCenter_19.setVisible(false);lyr_HospitalParticulardaMadeira_20.setVisible(false);lyr_HospitalDrNelioMendona_21.setVisible(false);lyr_HospitaldaLuz_22.setVisible(false);lyr_CentroRadiologicodoFunchal_23.setVisible(false);lyr_AeroportodoPortoSanto_24.setVisible(false);lyr_AeroportodaMadeira_25.setVisible(false);lyr_Tneis_26.setVisible(false);lyr_Ponteseviadutos_27.setVisible(false);lyr_Outrostrajetos_28.setVisible(false);lyr_TrajetoZonaFrancaUAG_29.setVisible(false);lyr_FurnasdoCavalum_30.setVisible(false);lyr_GrutasdeSoVicente_31.setVisible(false);lyr_Suscetibilidadeaoriscodeincndiosflorestais_32.setVisible(false);lyr_SuscetibilidadeaIncndiosecolapsosemcentroshistricoseemedifcioscomelevadaconcentraopopulacional_33.setVisible(false);lyr_Ocorrnciadeincndiosemtneis_34.setVisible(false);lyr_Suscetibilidadeaincndiosemtneis_35.setVisible(false);lyr_Suscetibilidadeocorrenciadeacidentescomsubstnciasbiolgicasqumicaseradiolgicas_36.setVisible(false);lyr_SuscetibilidadeaacidentesqueenvolvamsubstnciasperigosasSevesoIII_37.setVisible(false);lyr_Suscetibilidadeaerosocosteiranabasedaarriba_38.setVisible(false);lyr_Suscetibilidadeaerosocosteiraemarribas_39.setVisible(false);lyr_Suscetibilidadeamovimentosdemassaemvertente_40.setVisible(false);lyr_Suscetibilidadeaoriscodenevoeiros_41.setVisible(false);lyr_Sismoscommagnitudesuperiora20escaladeRichterregistadosdesde2010_42.setVisible(false);lyr_Suscetibilidadeocorrnciadesismos_43.setVisible(false);lyr_Suscetibilidadeaatividadevulcnica_44.setVisible(false);lyr_OcorrnciasdeemanacesdeCO2_45.setVisible(false);lyr_Suscetibilidadeaoriscodetsunami_46.setVisible(false);lyr_Ocorrnciadegalgamentoscosteiros_47.setVisible(false);lyr_Suscetibilidadeagalgamentoscosteiros_48.setVisible(false);lyr_Baciashidrogrficas_49.setVisible(false);lyr_reasinundveis_50.setVisible(false);lyr_Suscetibilidadeatempestadesdevento_51.setVisible(false);lyr_Suscetibilidadeaoriscodesecas_52.setVisible(false);lyr_Suscetibilidadeaondasdefrio_53.setVisible(false);lyr_Suscetibilidadeaondasdecalor_54.setVisible(false);lyr_Suscetibilidadeaoriscodeneves_55.setVisible(false);lyr_Freguesias_56.setVisible(false);lyr_Concelhos_57.setVisible(false);
+var layersList = [group_Basecartogrfica,group_Acidentesrodovirios,group_Acidentesemreasdeocupaoindustrialeparquesempresariais,group_Armazenagemdeprodutosexplosivos,group_Suscetibilidadeaoriscodeinundaoporroturadebarragens,group_Acidenteseminstalaesdecombustveisleoselubrificantes,group_Suscetibilidadeaoriscodeemergnciasradiolgicas,group_Localizaodetneisponteseoutrasinfraestruturas,group_Acidentesnotransportedemercadoriasperigosas,group_Localizaodascavidadessubterrneasnaturais,lyr_Suscetibilidadeaoriscodeincndiosflorestais_32,lyr_SuscetibilidadeaIncndiosecolapsosemcentroshistricoseemedifcioscomelevadaconcentraopopulacional_33,lyr_Ocorrnciadeincndiosemtneis_34,lyr_Suscetibilidadeaincndiosemtneis_35,lyr_Suscetibilidadeocorrenciadeacidentescomsubstnciasbiolgicasqumicaseradiolgicas_36,lyr_SuscetibilidadeaacidentesqueenvolvamsubstnciasperigosasSevesoIII_37,lyr_Suscetibilidadeaerosocosteiranabasedaarriba_38,lyr_Suscetibilidadeaerosocosteiraemarribas_39,lyr_Suscetibilidadeamovimentosdemassaemvertente_40,lyr_Suscetibilidadeaoriscodenevoeiros_41,lyr_Sismoscommagnitudesuperiora20escaladeRichterregistadosdesde2010_42,lyr_Suscetibilidadeocorrnciadesismos_43,lyr_Suscetibilidadeaatividadevulcnica_44,lyr_OcorrnciasdeemanacesdeCO2_45,lyr_Suscetibilidadeaoriscodetsunami_46,lyr_Ocorrnciadegalgamentoscosteiros_47,lyr_Suscetibilidadeagalgamentoscosteiros_48,lyr_Baciashidrogrficas_49,lyr_reasinundveis_50,lyr_Suscetibilidadeatempestadesdevento_51,lyr_Suscetibilidadeaoriscodesecas_52,lyr_Suscetibilidadeaondasdefrio_53,lyr_Suscetibilidadeaondasdecalor_54,lyr_Suscetibilidadeaoriscodeneves_55,lyr_Freguesias_56,lyr_Concelhos_57];
 lyr_Informao_2.set('fieldAliases', {'id': 'id', 'info': 'info', });
 lyr_Acidentesgraves_4.set('fieldAliases', {'Ocorrencia': 'Ocorrencia', 'Local': 'Local', });
 lyr_Acidentesrodovirios_5.set('fieldAliases', {'Designacao': 'Designacao', 'Ano': 'Ano', 'Classes': 'Classes', });
@@ -1037,8 +1005,6 @@ lyr_Suscetibilidadeaondasdecalor_54.set('fieldAliases', {'Classe': 'Classe', });
 lyr_Suscetibilidadeaoriscodeneves_55.set('fieldAliases', {'Classe': 'Classe', });
 lyr_Freguesias_56.set('fieldAliases', {'Freguesia': 'Freguesia', 'Residentes': 'Residentes', });
 lyr_Concelhos_57.set('fieldAliases', {'Concelho': 'Concelho', 'Residentes': 'Residentes', });
-lyr_Ilha_58.set('fieldAliases', {'fid': 'fid', 'DI': 'DI', 'Ilha': 'Ilha', 'N_Freguesi': 'N_Freguesi', 'N_Municipi': 'N_Municipi', 'Area_ha': 'Area_ha', 'Perim_km': 'Perim_km', });
-lyr_OceanoAtlntico_0.set('fieldImages', {'id': 'TextEdit', });
 lyr_Informao_2.set('fieldImages', {'id': 'TextEdit', 'info': 'TextEdit', });
 lyr_Acidentesgraves_4.set('fieldImages', {'Ocorrencia': 'TextEdit', 'Local': 'TextEdit', });
 lyr_Acidentesrodovirios_5.set('fieldImages', {'Designacao': 'TextEdit', 'Ano': 'TextEdit', 'Classes': 'TextEdit', });
@@ -1094,8 +1060,6 @@ lyr_Suscetibilidadeaondasdecalor_54.set('fieldImages', {'Classe': 'TextEdit', })
 lyr_Suscetibilidadeaoriscodeneves_55.set('fieldImages', {'Classe': 'TextEdit', });
 lyr_Freguesias_56.set('fieldImages', {'Freguesia': 'TextEdit', 'Residentes': 'TextEdit', });
 lyr_Concelhos_57.set('fieldImages', {'Concelho': 'TextEdit', 'Residentes': 'TextEdit', });
-lyr_Ilha_58.set('fieldImages', {'fid': '', 'DI': '', 'Ilha': '', 'N_Freguesi': '', 'N_Municipi': '', 'Area_ha': '', 'Perim_km': '', });
-lyr_OceanoAtlntico_0.set('fieldLabels', {'id': 'no label', });
 lyr_Informao_2.set('fieldLabels', {'id': 'no label', 'info': 'no label', });
 lyr_Acidentesgraves_4.set('fieldLabels', {'Ocorrencia': 'no label', 'Local': 'no label', });
 lyr_Acidentesrodovirios_5.set('fieldLabels', {'Designacao': 'no label', 'Ano': 'no label', 'Classes': 'no label', });
@@ -1151,7 +1115,3 @@ lyr_Suscetibilidadeaondasdecalor_54.set('fieldLabels', {'Classe': 'no label', })
 lyr_Suscetibilidadeaoriscodeneves_55.set('fieldLabels', {'Classe': 'no label', });
 lyr_Freguesias_56.set('fieldLabels', {'Freguesia': 'no label', 'Residentes': 'no label', });
 lyr_Concelhos_57.set('fieldLabels', {'Concelho': 'no label', 'Residentes': 'no label', });
-lyr_Ilha_58.set('fieldLabels', {'fid': 'no label', 'DI': 'no label', 'Ilha': 'no label', 'N_Freguesi': 'no label', 'N_Municipi': 'no label', 'Area_ha': 'no label', 'Perim_km': 'no label', });
-lyr_Ilha_58.on('precompose', function(evt) {
-    evt.context.globalCompositeOperation = 'normal';
-});

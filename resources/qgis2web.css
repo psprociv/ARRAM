@@ -212,8 +212,8 @@ td video {
 .ol-zoom {
 	position: relative;
     float: left;
-    top: unset;
-    left: unset;
+    top: 95px;
+    left: 10px;
     margin-top: 8px;
     margin-left: 8px;
 }
@@ -223,11 +223,10 @@ td video {
 .measure-control {
 	position: relative;
     float: left;
-    top: unset !important;
-    left: unset !important;
+    top: 95px;
+    left: 10px;
     margin-top: 8px;
     margin-left: 8px;
-	display: flex;
 }
 
 .tooltip {
@@ -271,24 +270,21 @@ td video {
   }
 
 
- .geolocate {
- position: relative !important;
- float: left;
- top: unset !important;
- left: unset !important;
- margin-top: 8px;
- margin-left: 8px;
-}
+  .geolocate {
+    position: relative !important;
+    float: left;
+    top: 95px !important;
+    left: 10px !important;
+    margin-top: 8px;
+    margin-left: 8px;
+   }
 
 
 .ol-geocoder {
-    position: relative !important;
-    float: left !important;
-    top: unset!important;
-    left: unset !important;
-	margin-top: 8px;
-    margin-left: 8px;
-    clear: both;
+    position: absolute !important;
+    top: 240px !important;  /* Mesmo nível da régua */
+    left: 20px !important; /* Ajuste conforme necessário */
+    z-index: 1000 !important;
 }
 .gcd-gl-control {
 	position: relative !important;
@@ -298,12 +294,12 @@ td video {
 }
 
 .search-layer {
-	position: relative !important;
+	position: absolute !important;
     float: left;
-    top: unset !important;
-    left: unset !important;
+    top: 50px !important;
+    left: 10px !important;
     margin-top: 8px;
-    margin-left: 8px;
+    margin-left: 18px;
 }
 
 .search-layer-input-search{
@@ -339,9 +335,9 @@ td video {
 
 .layer-switcher {
     position: relative;
+    right: 10px;
     float: right;
-    top: unset;
-    right: 0;
+    top: 90px;
     bottom: unset!important;
     margin-top: 8px;
     margin-right: 8px;
@@ -357,7 +353,7 @@ td video {
 	border: unset;
 	border-radius: unset;
     float: right;
-    width: fit-content;
+    width: 400px;
 	margin: 1px;
 	max-height: calc(100vh - 100px);
 }
@@ -377,7 +373,7 @@ td video {
     margin-left: 0px;
     max-width: unset;
 }
-}
+
 .ol-attribution a {
     text-decoration: none;
     font-family: sans-serif;

@@ -1,11 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_Ilha_58 = function(feature, resolution){
-    var context = {
-        feature: feature,
-        variables: {}
-    };
+
     var value = ""
     var labelText = "";
     size = 0;
@@ -28,4 +24,4 @@ var style_Ilha_58 = function(feature, resolution){
     })];
 
     return style;
-};
+

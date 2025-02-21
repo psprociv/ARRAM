@@ -11,6 +11,7 @@
         <link href="resources/ol-geocoder.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
         <link rel="stylesheet" href="./resources/qgis2web.css">
+        
         <style>
         html, body {
             background-color: #ffffff;
@@ -33,6 +34,32 @@
             background-color: rgba(255,255,255,.4) !important;
             padding: 2px !important;
         } 
+     
+        .title-bar {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #5c0ce6;
+            color: white;
+            display: flex;
+            align-items: center;  
+            justify-content: center;
+            padding: 15px 5%; 
+            font-size: 30px;
+            font-weight: bold;
+            z-index: 10;
+            text-align: center;
+            width: 100%;
+            height: 60px; 
+            line-height: normal; 
+            border-radius: 8px;
+        }       
+
+        .title-bar .icon {
+            margin-right: 10px;
+        }
+        
         </style>
 
         <style>
@@ -41,11 +68,16 @@
             height: 100%;
             padding: 0;
             margin: 0;
+            overflow: hidden;
         }
         </style>
         <title>Avaliação de Risco da Região Autónoma da Madeira</title>
     </head>
     <body>
+        <div class="title-bar">
+            <img src="logotipo\file.png" alt="Ícone" class="icon"> 
+            Avaliação de Risco da Região Autónoma da Madeira
+        </div>
         <div id="map">
             <div id="popup" class="ol-popup">
                 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
@@ -53,15 +85,123 @@
             </div>
         </div>
         <script src="resources/qgis2web_expressions.js"></script>
-<script src="resources/proj4.js"></script>
+        <script src="resources/proj4.js"></script>
         <script>proj4.defs('EPSG:5016','+proj=utm +zone=28 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs');</script>
         <script src="resources/polyfills.js"></script>
         <script src="./resources/functions.js"></script>
         <script src="./resources/ol.js"></script>
         <script src="./resources/ol-layerswitcher.js"></script>
         <script src="resources/ol-geocoder.js"></script>
-        <script src="layers/OceanoAtlntico_0.js"></script><script src="layers/Informao_2.js"></script><script src="layers/Acidentesgraves_4.js"></script><script src="layers/Acidentesrodovirios_5.js"></script><script src="layers/Parquesempresariais_6.js"></script><script src="layers/Estabelecimentosindustriais_7.js"></script><script src="layers/Suscetibilidademoderadaocorrnciadeacidentesemestabelecimentosindustriais_8.js"></script><script src="layers/Localizaodospaiis_9.js"></script><script src="layers/reasinundveis_10.js"></script><script src="layers/Barragens_11.js"></script><script src="layers/Armazenagemdecombustveis_12.js"></script><script src="layers/GsdePetrleoLiquefeito_13.js"></script><script src="layers/Classesdesuscetibilidade_14.js"></script><script src="layers/UnidadedeRadioterapiadoFunchal_15.js"></script><script src="layers/PortoMartimodoPortoSanto_16.js"></script><script src="layers/PortoMartimodoFunchal_17.js"></script><script src="layers/PortoMartimodoCanial_18.js"></script><script src="layers/MadeiraMedicalCenter_19.js"></script><script src="layers/HospitalParticulardaMadeira_20.js"></script><script src="layers/HospitalDrNelioMendona_21.js"></script><script src="layers/HospitaldaLuz_22.js"></script><script src="layers/CentroRadiologicodoFunchal_23.js"></script><script src="layers/AeroportodoPortoSanto_24.js"></script><script src="layers/AeroportodaMadeira_25.js"></script><script src="layers/Tneis_26.js"></script><script src="layers/Ponteseviadutos_27.js"></script><script src="layers/Outrostrajetos_28.js"></script><script src="layers/TrajetoZonaFrancaUAG_29.js"></script><script src="layers/FurnasdoCavalum_30.js"></script><script src="layers/GrutasdeSoVicente_31.js"></script><script src="layers/Suscetibilidadeaoriscodeincndiosflorestais_32.js"></script><script src="layers/SuscetibilidadeaIncndiosecolapsosemcentroshistricoseemedifcioscomelevadaconcentraopopulacional_33.js"></script><script src="layers/Ocorrnciadeincndiosemtneis_34.js"></script><script src="layers/Suscetibilidadeaincndiosemtneis_35.js"></script><script src="layers/Suscetibilidadeocorrenciadeacidentescomsubstnciasbiolgicasqumicaseradiolgicas_36.js"></script><script src="layers/SuscetibilidadeaacidentesqueenvolvamsubstnciasperigosasSevesoIII_37.js"></script><script src="layers/Suscetibilidadeaerosocosteiranabasedaarriba_38.js"></script><script src="layers/Suscetibilidadeaerosocosteiraemarribas_39.js"></script><script src="layers/Suscetibilidadeamovimentosdemassaemvertente_40.js"></script><script src="layers/Suscetibilidadeaoriscodenevoeiros_41.js"></script><script src="layers/Sismoscommagnitudesuperiora20escaladeRichterregistadosdesde2010_42.js"></script><script src="layers/Suscetibilidadeocorrnciadesismos_43.js"></script><script src="layers/Suscetibilidadeaatividadevulcnica_44.js"></script><script src="layers/OcorrnciasdeemanacesdeCO2_45.js"></script><script src="layers/Suscetibilidadeaoriscodetsunami_46.js"></script><script src="layers/Ocorrnciadegalgamentoscosteiros_47.js"></script><script src="layers/Suscetibilidadeagalgamentoscosteiros_48.js"></script><script src="layers/Baciashidrogrficas_49.js"></script><script src="layers/reasinundveis_50.js"></script><script src="layers/Suscetibilidadeatempestadesdevento_51.js"></script><script src="layers/Suscetibilidadeaoriscodesecas_52.js"></script><script src="layers/Suscetibilidadeaondasdefrio_53.js"></script><script src="layers/Suscetibilidadeaondasdecalor_54.js"></script><script src="layers/Suscetibilidadeaoriscodeneves_55.js"></script><script src="layers/Freguesias_56.js"></script><script src="layers/Concelhos_57.js"></script><script src="layers/Ilha_58.js"></script>
-        <script src="styles/OceanoAtlntico_0_style.js"></script><script src="styles/Informao_2_style.js"></script><script src="styles/Acidentesgraves_4_style.js"></script><script src="styles/Acidentesrodovirios_5_style.js"></script><script src="styles/Parquesempresariais_6_style.js"></script><script src="styles/Estabelecimentosindustriais_7_style.js"></script><script src="styles/Suscetibilidademoderadaocorrnciadeacidentesemestabelecimentosindustriais_8_style.js"></script><script src="styles/Localizaodospaiis_9_style.js"></script><script src="styles/reasinundveis_10_style.js"></script><script src="styles/Barragens_11_style.js"></script><script src="styles/Armazenagemdecombustveis_12_style.js"></script><script src="styles/GsdePetrleoLiquefeito_13_style.js"></script><script src="styles/Classesdesuscetibilidade_14_style.js"></script><script src="styles/UnidadedeRadioterapiadoFunchal_15_style.js"></script><script src="styles/PortoMartimodoPortoSanto_16_style.js"></script><script src="styles/PortoMartimodoFunchal_17_style.js"></script><script src="styles/PortoMartimodoCanial_18_style.js"></script><script src="styles/MadeiraMedicalCenter_19_style.js"></script><script src="styles/HospitalParticulardaMadeira_20_style.js"></script><script src="styles/HospitalDrNelioMendona_21_style.js"></script><script src="styles/HospitaldaLuz_22_style.js"></script><script src="styles/CentroRadiologicodoFunchal_23_style.js"></script><script src="styles/AeroportodoPortoSanto_24_style.js"></script><script src="styles/AeroportodaMadeira_25_style.js"></script><script src="styles/Tneis_26_style.js"></script><script src="styles/Ponteseviadutos_27_style.js"></script><script src="styles/Outrostrajetos_28_style.js"></script><script src="styles/TrajetoZonaFrancaUAG_29_style.js"></script><script src="styles/FurnasdoCavalum_30_style.js"></script><script src="styles/GrutasdeSoVicente_31_style.js"></script><script src="styles/Suscetibilidadeaoriscodeincndiosflorestais_32_style.js"></script><script src="styles/SuscetibilidadeaIncndiosecolapsosemcentroshistricoseemedifcioscomelevadaconcentraopopulacional_33_style.js"></script><script src="styles/Ocorrnciadeincndiosemtneis_34_style.js"></script><script src="styles/Suscetibilidadeaincndiosemtneis_35_style.js"></script><script src="styles/Suscetibilidadeocorrenciadeacidentescomsubstnciasbiolgicasqumicaseradiolgicas_36_style.js"></script><script src="styles/SuscetibilidadeaacidentesqueenvolvamsubstnciasperigosasSevesoIII_37_style.js"></script><script src="styles/Suscetibilidadeaerosocosteiranabasedaarriba_38_style.js"></script><script src="styles/Suscetibilidadeaerosocosteiraemarribas_39_style.js"></script><script src="styles/Suscetibilidadeamovimentosdemassaemvertente_40_style.js"></script><script src="styles/Suscetibilidadeaoriscodenevoeiros_41_style.js"></script><script src="styles/Sismoscommagnitudesuperiora20escaladeRichterregistadosdesde2010_42_style.js"></script><script src="styles/Suscetibilidadeocorrnciadesismos_43_style.js"></script><script src="styles/Suscetibilidadeaatividadevulcnica_44_style.js"></script><script src="styles/OcorrnciasdeemanacesdeCO2_45_style.js"></script><script src="styles/Suscetibilidadeaoriscodetsunami_46_style.js"></script><script src="styles/Ocorrnciadegalgamentoscosteiros_47_style.js"></script><script src="styles/Suscetibilidadeagalgamentoscosteiros_48_style.js"></script><script src="styles/Baciashidrogrficas_49_style.js"></script><script src="styles/reasinundveis_50_style.js"></script><script src="styles/Suscetibilidadeatempestadesdevento_51_style.js"></script><script src="styles/Suscetibilidadeaoriscodesecas_52_style.js"></script><script src="styles/Suscetibilidadeaondasdefrio_53_style.js"></script><script src="styles/Suscetibilidadeaondasdecalor_54_style.js"></script><script src="styles/Suscetibilidadeaoriscodeneves_55_style.js"></script><script src="styles/Freguesias_56_style.js"></script><script src="styles/Concelhos_57_style.js"></script><script src="styles/Ilha_58_style.js"></script>
+        <script src="layers/Informao_2.js"></script>
+        <script src="layers/Acidentesgraves_4.js"></script>
+        <script src="layers/Acidentesrodovirios_5.js"></script>
+        <script src="layers/Parquesempresariais_6.js"></script>
+        <script src="layers/Estabelecimentosindustriais_7.js"></script>
+        <script src="layers/Suscetibilidademoderadaocorrnciadeacidentesemestabelecimentosindustriais_8.js"></script>
+        <script src="layers/Localizaodospaiis_9.js"></script>
+        <script src="layers/reasinundveis_10.js"></script>
+        <script src="layers/Barragens_11.js"></script>
+        <script src="layers/Armazenagemdecombustveis_12.js"></script>
+        <script src="layers/GsdePetrleoLiquefeito_13.js"></script>
+        <script src="layers/Classesdesuscetibilidade_14.js"></script>
+        <script src="layers/UnidadedeRadioterapiadoFunchal_15.js"></script>
+        <script src="layers/PortoMartimodoPortoSanto_16.js"></script>
+        <script src="layers/PortoMartimodoFunchal_17.js"></script>
+        <script src="layers/PortoMartimodoCanial_18.js"></script>
+        <script src="layers/MadeiraMedicalCenter_19.js"></script>
+        <script src="layers/HospitalParticulardaMadeira_20.js"></script>
+        <script src="layers/HospitalDrNelioMendona_21.js"></script>
+        <script src="layers/HospitaldaLuz_22.js"></script>
+        <script src="layers/CentroRadiologicodoFunchal_23.js"></script>
+        <script src="layers/AeroportodoPortoSanto_24.js"></script>
+        <script src="layers/AeroportodaMadeira_25.js"></script>
+        <script src="layers/Tneis_26.js"></script>
+        <script src="layers/Ponteseviadutos_27.js"></script>
+        <script src="layers/Outrostrajetos_28.js"></script>
+        <script src="layers/TrajetoZonaFrancaUAG_29.js"></script>
+        <script src="layers/FurnasdoCavalum_30.js"></script>
+        <script src="layers/GrutasdeSoVicente_31.js"></script>
+        <script src="layers/Suscetibilidadeaoriscodeincndiosflorestais_32.js"></script>
+        <script src="layers/SuscetibilidadeaIncndiosecolapsosemcentroshistricoseemedifcioscomelevadaconcentraopopulacional_33.js"></script>
+        <script src="layers/Ocorrnciadeincndiosemtneis_34.js"></script>
+        <script src="layers/Suscetibilidadeaincndiosemtneis_35.js"></script>
+        <script src="layers/Suscetibilidadeocorrenciadeacidentescomsubstnciasbiolgicasqumicaseradiolgicas_36.js"></script>
+        <script src="layers/SuscetibilidadeaacidentesqueenvolvamsubstnciasperigosasSevesoIII_37.js"></script>
+        <script src="layers/Suscetibilidadeaerosocosteiranabasedaarriba_38.js"></script>
+        <script src="layers/Suscetibilidadeaerosocosteiraemarribas_39.js"></script>
+        <script src="layers/Suscetibilidadeamovimentosdemassaemvertente_40.js"></script>
+        <script src="layers/Suscetibilidadeaoriscodenevoeiros_41.js"></script>
+        <script src="layers/Sismoscommagnitudesuperiora20escaladeRichterregistadosdesde2010_42.js"></script>
+        <script src="layers/Suscetibilidadeocorrnciadesismos_43.js"></script>
+        <script src="layers/Suscetibilidadeaatividadevulcnica_44.js"></script>
+        <script src="layers/OcorrnciasdeemanacesdeCO2_45.js"></script>
+        <script src="layers/Suscetibilidadeaoriscodetsunami_46.js"></script>
+        <script src="layers/Ocorrnciadegalgamentoscosteiros_47.js"></script>
+        <script src="layers/Suscetibilidadeagalgamentoscosteiros_48.js"></script>
+        <script src="layers/Baciashidrogrficas_49.js"></script>
+        <script src="layers/reasinundveis_50.js"></script>
+        <script src="layers/Suscetibilidadeatempestadesdevento_51.js"></script>
+        <script src="layers/Suscetibilidadeaoriscodesecas_52.js"></script>
+        <script src="layers/Suscetibilidadeaondasdefrio_53.js"></script>
+        <script src="layers/Suscetibilidadeaondasdecalor_54.js"></script>
+        <script src="layers/Suscetibilidadeaoriscodeneves_55.js"></script>
+        <script src="layers/Freguesias_56.js"></script>
+        <script src="layers/Concelhos_57.js"></script>
+        <script src="styles/Informao_2_style.js"></script>
+        <script src="styles/Acidentesgraves_4_style.js"></script>
+        <script src="styles/Acidentesrodovirios_5_style.js"></script>
+        <script src="styles/Parquesempresariais_6_style.js"></script>
+        <script src="styles/Estabelecimentosindustriais_7_style.js"></script>
+        <script src="styles/Suscetibilidademoderadaocorrnciadeacidentesemestabelecimentosindustriais_8_style.js"></script>
+        <script src="styles/Localizaodospaiis_9_style.js"></script>
+        <script src="styles/reasinundveis_10_style.js"></script>
+        <script src="styles/Barragens_11_style.js"></script>
+        <script src="styles/Armazenagemdecombustveis_12_style.js"></script>
+        <script src="styles/GsdePetrleoLiquefeito_13_style.js"></script>
+        <script src="styles/Classesdesuscetibilidade_14_style.js"></script>
+        <script src="styles/UnidadedeRadioterapiadoFunchal_15_style.js"></script>
+        <script src="styles/PortoMartimodoPortoSanto_16_style.js"></script>
+        <script src="styles/PortoMartimodoFunchal_17_style.js"></script>
+        <script src="styles/PortoMartimodoCanial_18_style.js"></script>
+        <script src="styles/MadeiraMedicalCenter_19_style.js"></script>
+        <script src="styles/HospitalParticulardaMadeira_20_style.js"></script>
+        <script src="styles/HospitalDrNelioMendona_21_style.js"></script>
+        <script src="styles/HospitaldaLuz_22_style.js"></script>
+        <script src="styles/CentroRadiologicodoFunchal_23_style.js"></script>
+        <script src="styles/AeroportodoPortoSanto_24_style.js"></script>
+        <script src="styles/AeroportodaMadeira_25_style.js"></script>
+        <script src="styles/Tneis_26_style.js"></script>
+        <script src="styles/Ponteseviadutos_27_style.js"></script>
+        <script src="styles/Outrostrajetos_28_style.js"></script>
+        <script src="styles/TrajetoZonaFrancaUAG_29_style.js"></script>
+        <script src="styles/FurnasdoCavalum_30_style.js"></script>
+        <script src="styles/GrutasdeSoVicente_31_style.js"></script>
+        <script src="styles/Suscetibilidadeaoriscodeincndiosflorestais_32_style.js"></script>
+        <script src="styles/SuscetibilidadeaIncndiosecolapsosemcentroshistricoseemedifcioscomelevadaconcentraopopulacional_33_style.js"></script>
+        <script src="styles/Ocorrnciadeincndiosemtneis_34_style.js"></script>
+        <script src="styles/Suscetibilidadeaincndiosemtneis_35_style.js"></script>
+        <script src="styles/Suscetibilidadeocorrenciadeacidentescomsubstnciasbiolgicasqumicaseradiolgicas_36_style.js"></script>
+        <script src="styles/SuscetibilidadeaacidentesqueenvolvamsubstnciasperigosasSevesoIII_37_style.js"></script>
+        <script src="styles/Suscetibilidadeaerosocosteiranabasedaarriba_38_style.js"></script>
+        <script src="styles/Suscetibilidadeaerosocosteiraemarribas_39_style.js"></script>
+        <script src="styles/Suscetibilidadeamovimentosdemassaemvertente_40_style.js"></script>
+        <script src="styles/Suscetibilidadeaoriscodenevoeiros_41_style.js"></script>
+        <script src="styles/Sismoscommagnitudesuperiora20escaladeRichterregistadosdesde2010_42_style.js"></script>
+        <script src="styles/Suscetibilidadeocorrnciadesismos_43_style.js"></script>
+        <script src="styles/Suscetibilidadeaatividadevulcnica_44_style.js"></script>
+        <script src="styles/OcorrnciasdeemanacesdeCO2_45_style.js"></script>
+        <script src="styles/Suscetibilidadeaoriscodetsunami_46_style.js"></script>
+        <script src="styles/Ocorrnciadegalgamentoscosteiros_47_style.js"></script>
+        <script src="styles/Suscetibilidadeagalgamentoscosteiros_48_style.js"></script>
+        <script src="styles/Baciashidrogrficas_49_style.js"></script>
+        <script src="styles/reasinundveis_50_style.js"></script>
+        <script src="styles/Suscetibilidadeatempestadesdevento_51_style.js"></script>
+        <script src="styles/Suscetibilidadeaoriscodesecas_52_style.js"></script>
+        <script src="styles/Suscetibilidadeaondasdefrio_53_style.js"></script>
+        <script src="styles/Suscetibilidadeaondasdecalor_54_style.js"></script>
+        <script src="styles/Suscetibilidadeaoriscodeneves_55_style.js"></script>
+        <script src="styles/Freguesias_56_style.js"></script>
+        <script src="styles/Concelhos_57_style.js"></script>
         <script src="./layers/layers.js" type="text/javascript"></script> 
         <script src="./resources/Autolinker.min.js"></script>
         <script src="./resources/qgis2web.js"></script>

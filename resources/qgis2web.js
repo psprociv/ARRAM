@@ -12,7 +12,8 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([277566.776449, 3601473.611793, 387898.026449, 3672037.986793], map.getSize());
+map.getView().fit([330000, 3570000, 340000, 3710000], map.getSize());
+
 
 ////controls container
 
@@ -930,16 +931,8 @@ map.on("rendercomplete", function(evt) {
 		var attributionList = attribution.getElementsByTagName('ul')[0];
 		if (attributionList) {
 			var qgis2webAttribution = document.createElement('li');
-			qgis2webAttribution.innerHTML = '<a href="https://github.com/tomchadwin/qgis2web">qgis2web</a> &middot; ';
+			qgis2webAttribution.innerHTML = '<a href="https://www.procivmadeira.pt/pt/">SRPC.IP-RAM</a> &middot; ';
 			attributionList.appendChild(qgis2webAttribution);
-
-			var olAttribution = document.createElement('li');
-			olAttribution.innerHTML = '<a href="https://openlayers.org/">OpenLayers</a> &middot; ';
-			attributionList.appendChild(olAttribution);
-
-			var qgisAttribution = document.createElement('li');
-			qgisAttribution.innerHTML = '<a href="https://qgis.org/">QGIS</a>';
-			attributionList.appendChild(qgisAttribution);
 		}
 	attributionComplete = true;
 	}

@@ -1,11 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_OceanoAtlntico_0 = function(feature, resolution){
-    var context = {
-        feature: feature,
-        variables: {}
-    };
+
     var value = ""
     var labelText = "";
     size = 0;
